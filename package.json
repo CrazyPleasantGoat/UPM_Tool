@@ -1,0 +1,14 @@
+{
+  "name": "com.bigdevil.tool",
+  "displayName": "Tool",
+  "version": "1.0.0",
+  "unity": "2022.3",
+  "description": "Tool",
+  "keywords": [
+    "BigDevil",
+    "Tool"
+  ],
+  "author": "CrazyPleasantGoat",
+  "dependencies": {
+  }
+}
