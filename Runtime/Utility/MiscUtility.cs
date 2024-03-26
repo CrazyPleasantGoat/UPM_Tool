@@ -2,7 +2,7 @@
 
 namespace BigDevil.Tool.Runtime
 {
-    public class MiscUtility
+    public static class MiscUtility
     {
         /// <summary>
         /// 获取唯一id
@@ -43,6 +43,16 @@ namespace BigDevil.Tool.Runtime
             }
 
             return (byteSize / Math.Pow(num, 4)).ToString("f2") + "T";
+        }
+
+        /// <summary>
+        /// 添加时间戳
+        /// </summary>
+        /// <param name="url"></param>
+        /// <returns></returns>
+        public static string AddTimeStamp(this string url)
+        {
+            return url.Contains("?") ? $"{url}&timestamp={DateTimeOffset.UtcNow.ToUnixTimeMilliseconds()}" : $"{url}?timestamp={DateTimeOffset.UtcNow.ToUnixTimeMilliseconds()}";
         }
     }
 }
